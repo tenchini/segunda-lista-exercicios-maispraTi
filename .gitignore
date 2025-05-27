@@ -1,0 +1,21 @@
+# Pasta padrão de dependências
+node_modules/
+
+# Arquivos de log
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*~
+*.swp
+
+# Configurações de editores
+.vscode/
+.idea/
+*.iml
+
+# Arquivos de ambiente
+.env
