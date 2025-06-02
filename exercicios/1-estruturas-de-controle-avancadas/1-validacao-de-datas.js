@@ -35,40 +35,6 @@ function ehDataValida(dia, mes, ano) {
     return false
 }
 
-function rodarTestes() {
-    const anoAtual = new Date().getFullYear()
-
-    const testes = [
-        {dia: 31, mes: 1, ano: anoAtual, esperado: true},
-        {dia: 30, mes: 4, ano: anoAtual, esperado: true},
-        {dia: 29, mes: 2, ano: 2024, esperado: true}, // bissexto
-        {dia: 28, mes: 2, ano: anoAtual, esperado: true},
-        {dia: 1, mes: 12, ano: anoAtual, esperado: true},
-        {dia: 15, mes: 7, ano: 2000, esperado: true},
-        {dia: 29, mes: 2, ano: 2000, esperado: true}, // bissexto
-        {dia: 29, mes: 2, ano: 2023, esperado: false}, // não bissexto
-        {dia: 31, mes: 4, ano: anoAtual, esperado: false}, // abril tem 30 dias
-        {dia: 0, mes: 5, ano: anoAtual, esperado: false}, // dia 0 não existe
-        {dia: 32, mes: 1, ano: anoAtual, esperado: false}, // dia maior que 31
-        {dia: 15, mes: 13, ano: anoAtual, esperado: false}, // mês inválido
-        {dia: 10, mes: 10, ano: 1500, esperado: false}, // ano abaixo de 1582
-        {dia: 31, mes: 6, ano: anoAtual, esperado: false}, // junho tem 30 dias
-        {dia: 29, mes: 2, ano: 1900, esperado: false}, // não bissexto (divisível por 100, mas não por 400)
-    ]
-
-    console.log('VALIDAÇÃO DE TESTES: \n')
-    testes.forEach((teste, index) => {
-        const resultado = ehDataValida(teste.dia, teste.mes, teste.ano)
-        if (resultado === teste.esperado) {
-            console.log(`Teste ${String(index + 1).padStart(2, 0)}: PASSOU ✅`)
-        } else {
-            console.log(
-                `Teste ${String(index + 1).padStart(2, 0)}: FALHOU ❌ - Entrada: (${teste.dia}, ${teste.mes}, ${
-                    teste.ano
-                }) | Esperado: ${teste.esperado} | Obtido: ${resultado}`,
-            )
-        }
-    })
-}
-
-rodarTestes()
+console.log(ehDataValida(31, 1, 2025))
+console.log(ehDataValida(29, 2, 1900))
+console.log(ehDataValida(29, 2, 2023))
