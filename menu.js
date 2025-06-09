@@ -34,7 +34,7 @@ function mostrarMenu() {
             require('./exercicios/2-funcoes-e-recursao/2-debounce.js')
             break
         case '6':
-            require('./exercicios/2-funcoes-e-recursao/3-memorization.js')
+            require('./exercicios/2-funcoes-e-recursao/3-memoization.js')
             break
         case '7':
             require('./exercicios/3-arrays-e-objectos-complexos/1-mapeamento-e-ordenacao.js')
